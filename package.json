@@ -8,7 +8,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk",
+    "cdk": "cdk"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.115",
@@ -25,9 +25,12 @@
     "@aws-lambda-powertools/logger": "^1.8.0",
     "@aws-lambda-powertools/metrics": "^1.8.0",
     "@aws-lambda-powertools/tracer": "^1.8.0",
+    "@aws-sdk/client-ssm": "^3.344.0",
+    "@slack/webhook": "^6.1.0",
     "aws-cdk-lib": "2.45.0",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.0.0",
-    "source-map-support": "^0.5.21"
+    "source-map-support": "^0.5.21",
+    "zlib": "^1.0.5"
   }
 }

@@ -1,7 +1,5 @@
 import { LambdaInterface } from '@aws-lambda-powertools/commons';
 import {
-    APIGatewayProxyEvent,
-    APIGatewayProxyResult,
     Context,
   } from 'aws-lambda';
   import { logger, tracer, metrics } from './common/powertools';
@@ -10,7 +8,6 @@ class LambdaHandler implements LambdaInterface {
 
     @logger.injectLambdaContext({ logEvent: true })
     @metrics.logMetrics({
-
         throwOnEmptyMetrics: false,
         captureColdStartMetric: true,
     })
@@ -20,6 +17,8 @@ class LambdaHandler implements LambdaInterface {
    ): Promise<void> {
         logger.info("Hello")
         logger.info("This is a slack message", { slack: true })
+        logger.info("This is a slack message - as string", { slack: "true" })
+
         return await Promise.resolve()
    }
 
